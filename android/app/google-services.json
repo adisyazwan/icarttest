@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "793242742579",
+    "project_id": "icarttest",
+    "storage_bucket": "icarttest.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:793242742579:android:0569cb8eeb62a150751846",
+        "android_client_info": {
+          "package_name": "com.flutterflow.icarttest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "793242742579-3i93p3dtfbv3hf5kgm8sl47gq4qg60qe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCa0-yOKdeqAFznm3EZ4ctAdKoTWzjW07s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "793242742579-3i93p3dtfbv3hf5kgm8sl47gq4qg60qe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
