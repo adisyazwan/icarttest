@@ -1,4 +1,5 @@
 import '../auth/auth_util.dart';
+import '../backend/backend.dart';
 import '../flutter_flow/flutter_flow_theme.dart';
 import '../flutter_flow/flutter_flow_widgets.dart';
 import '../login_page/login_page_widget.dart';
@@ -35,7 +36,7 @@ class _CreateAccountPageWidgetState extends State<CreateAccountPageWidget> {
           Align(
             alignment: Alignment(0, -1),
             child: Image.network(
-              'https://images.unsplash.com/photo-1559066653-edfd1e6bbbd5?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2167&q=80',
+              'https://www.makdigitaldesign.com/wp-content/uploads/2020/02/ecommerce-1.png',
               width: double.infinity,
               height: 250,
               fit: BoxFit.cover,
@@ -65,8 +66,8 @@ class _CreateAccountPageWidgetState extends State<CreateAccountPageWidget> {
                             Padding(
                               padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
                               child: Image.asset(
-                                'assets/images/logo_flutterMet@2x.png',
-                                width: 120,
+                                'assets/images/logo_icart_trans.png',
+                                width: 200,
                                 fit: BoxFit.cover,
                               ),
                             ),
@@ -185,7 +186,7 @@ class _CreateAccountPageWidgetState extends State<CreateAccountPageWidget> {
                                   padding: EdgeInsets.fromLTRB(0, 0, 0, 20),
                                   child: FFButtonWidget(
                                     onPressed: () async {
-                                      final user = await signInWithEmail(
+                                      final user = await createAccountWithEmail(
                                         context,
                                         emailTextController.text,
                                         passwordTextController.text,
@@ -193,6 +194,17 @@ class _CreateAccountPageWidgetState extends State<CreateAccountPageWidget> {
                                       if (user == null) {
                                         return;
                                       }
+
+                                      final email = '';
+
+                                      final usersRecordData =
+                                          createUsersRecordData(
+                                        email: email,
+                                      );
+
+                                      await UsersRecord.collection
+                                          .doc(user.uid)
+                                          .update(usersRecordData);
 
                                       await Navigator.pushAndRemoveUntil(
                                         context,
